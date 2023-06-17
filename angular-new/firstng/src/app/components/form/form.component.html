@@ -1,0 +1,37 @@
+<form #regForm="ngForm" (ngSubmit)="mySubmit(regForm)">
+    <div class="form-group" >
+    
+        <label for="CustId" >Cust Id</label>
+        <input #custid="ngModel" 
+               type="text" 
+               name="custId" 
+               required 
+               minlength="4" 
+               maxlength="12" 
+               class="form-control" 
+               ngModel 
+               [(ngModel)]="customer.id"   >
+    
+    
+        <div *ngIf="custid.touched && custid.invalid" class="alert alert-danger">Invalid Customer ID</div>
+    </div>
+    <pre></pre>
+    
+     <div class="form-group">
+    
+               <label for="custname" >Customer Name</label>
+               <input type="text" name="custname" class="form-control" ngModel  [(ngModel)]="customer.name" >
+     </div>
+    <pre></pre>
+    
+     <div class="form-group">
+    
+        <label for="balance" >Balance</label>
+        <input type="text" name="balance" class="form-control" ngModel  [(ngModel)]="customer.balance">
+    </div>
+    <pre></pre>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+    
+    

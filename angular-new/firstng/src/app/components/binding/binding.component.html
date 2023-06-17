@@ -1,0 +1,92 @@
+<hr>
+<h2>Available product(s): 
+        <span *ngIf="isQtyAvailable; else notAvailableQty">
+            <span [style.background-color]="available">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+        </span>
+        <ng-template #notAvailableQty>
+            <span [style.background-color]="notavailable">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+        </ng-template> 
+</h2>
+<h3>Product Id:{{productId}}</h3>
+<h3>Description:{{description}}</h3>
+<h3>Quantity: {{qty}}</h3>
+<h3> price: {{price}}</h3>
+<h3>Delivery Status:
+    <span [style.background-color]="delivery">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+</h3>  
+<h3>Enter Order Quantity:<input type="text"[(ngModel)]="orderedQty"></h3>
+<h3>You have entered :{{orderedQty}} : units</h3>
+    <h3>Place Order <button type="button" (click)="takeOrder()">Place Order</button></h3>
+
+<hr>
+
+
+<div *ngIf="isMember;else nonMember">
+<h3>Members Area</h3>
+<h4>You are eligible for a 500 Gb free download this month</h4>
+</div>
+<ng-template #nonMember></ng-template>
+<h4>Hurry!register fast</h4>
+<hr>
+<div>
+   
+    <h2>Products List</h2>
+    <table border="2">
+        <thead>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+   
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+<td>{{product.name}}</td>
+<td>{{product.description}}</td>
+ <td>{{product.price}}</td>
+<td>{{product.quantity}}</td>
+    </tr>
+</table>
+    
+</div>
+<hr>
+<div>
+    <h2>Mobile Phone</h2>
+    <table border="2">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Value</th>
+        </thead>
+        <tr *ngFor="let item of items">
+            
+    <td>{{item.itemCode}}</td>
+    <td>{{item.name}}</td>
+     <td>{{item.description}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.qty}}</td>
+    <td>{{item.price * item.qty}}</td>
+    
+        </tr>
+    </table>
+</div>
+
+
+<!-- <div *ngIf="isQtyAvailable;else isNoStock">
+        <span [style.background-color]="available">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        </h3>
+    </div> -->
+    
+    

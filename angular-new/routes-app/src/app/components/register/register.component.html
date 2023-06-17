@@ -1,0 +1,83 @@
+<h1 style="text-align: center;">Registration </h1>
+
+<div class="container" style="background-color: white;">
+<form name="regForm"  class="mb-4" >
+<table   align="center" class="table table-success table-stripped lh-lg"  >
+    <tr>
+        <td> <label for="fullname">Full Name:* </label></td>
+        <td><input type="text" name="fullname"  class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="choose">Enter email:</label></td>
+        <td><input type="email" name="choosemail" class="form-control" placeholder="abcd@gmail.com" required > </td>
+    </tr>
+    <tr>
+        <td><label for="password">Enter Password:</label></td>
+        <td><input type="password" name="pass" class="form-control"> </td>
+    </tr>
+    <tr>
+        <td><label for="retypepass">Retype Password:</label></td>
+        <td><input type="password" name="retypepass" class="form-control"> </td>
+    </tr>
+    <tr>
+        <td><label for="altemailop">Check if you don't have alternate email</label></td>
+        <td><input type="checkbox" name="altemailop" > </td>
+    </tr>
+    <tr>
+        <td><label for="dob">Choose DOB:</label></td>
+        <td><input type="date" name="dob" class="form-control"> </td>
+    </tr>
+     
+    <tr>
+        <td><label for="mobile">Mobile number:</label></td>
+        <td><select name="countrycode" class="form-control">
+            <option value="ind">+91 India</option>
+            <option value="USA">+1 USA</option>
+            <option value="UK">+44 Great Britan</option>
+        </select>
+            
+            <input type="text" name="no" class="form-control"> </td>
+    </tr>
+    
+    <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>Male &nbsp;&nbsp;<input type="radio" name="gender" value="Male"> 
+        Female &nbsp;&nbsp;<input type="radio" name="gender" value="Female"></td>
+    </tr>
+
+
+    <tr>
+        <td><label for="country">Choose Country:</label></td>
+        <td><select name="country" id="" class="form-control">
+            <option value="ind">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">Great Britan</option>
+            <option value="aus">Australia</option>
+            </select></td>
+    </tr>
+<tr>
+<td><label for="city">Choose City:</label>
+<td><select name="city" id=""  class="form-control">
+    <option value="tri">Trivandrum</option>
+    <option value="mum">Mumbai</option>
+    <option value="ny">New York</option>
+    <option value="cal">California</option>
+</select></td>
+
+</tr>
+<tr>
+<td></td>
+<td >
+    <input type="submit" value="Register" class="btn btn-outline-primary btn-lg"class="form-control">
+    <input class="btn btn-outline-danger btn-lg" type="reset"  value="clear"  class="form-control">
+</td>
+</tr>
+
+
+
+</table>
+
+
+</form>
+
+</div>
